@@ -1,0 +1,39 @@
+<!--contact.html--!>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+	<div class="logo">
+            <h1>Sapphire Terrace</h1> <!-- Add your restaurant's name here -->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('menu') }}">Menu</a></li>
+                <li><a href="{{ url_for('reservation') }}">Reservation</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: contact@sapphireterrace.com</p>
+        <p>Phone: (123) 456-7890</p>
+        <p>Address: 123 Main Street, Cityville</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sapphire Terrace. All rights reserved.</p>
+		<a href="{{ url_for('login') }}" class="lock-icon" title="Admin Login"><img src="{{ url_for('static', filename='images/lock.jpg') }}" alt="Lock Icon"></a>
+    </footer>
+</body>
+</html>

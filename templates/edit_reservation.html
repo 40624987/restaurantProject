@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Reservation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Edit Reservation</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('admin') }}">Back to Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="edit-reservation-form">
+        <form method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{ reservation.name }}" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="{{ reservation.email }}" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" value="{{ reservation.date }}" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" value="{{ reservation.time }}" required>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" value="{{ reservation.guests }}" required>
+
+            <button type="submit">Update Reservation</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sapphire Terrace</p>
+    </footer>
+
+</body>
+</html>

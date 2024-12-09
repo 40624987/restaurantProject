@@ -1,0 +1,91 @@
+<!--menu.html--!>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+	<div class="logo">
+            <h1>Sapphire Terrace</h1> <!-- Add your restaurant's name here -->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('menu') }}">Menu</a></li>
+                <li><a href="{{ url_for('reservation') }}">Reservation</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-item">
+            <h3>Grilled Steak</h3>
+            <p>A juicy grilled steak served with mashed potatoes and seasonal vegetables.</p>
+            <p class="price">$29.99</p>
+        </div>
+        <div class="menu-item">
+            <h3>Pasta Primavera</h3>
+            <p>Classic pasta with fresh vegetables and a light creamy sauce.</p>
+            <p class="price">$19.99</p>
+        </div>
+        <div class="menu-item">
+            <h3>Chicken Alfredo</h3>
+            <p>Grilled chicken served with fettuccine pasta in a rich Alfredo sauce.</p>
+            <p class="price">$22.99</p>
+        </div>
+        <div class="menu-item">
+            <h3>Caesar Salad</h3>
+            <p>Fresh romaine lettuce, parmesan cheese, croutons, and Caesar dressing.</p>
+            <p class="price">$12.99</p>
+        </div>
+        <div class="menu-item">
+            <h3>Margherita Pizza</h3>
+            <p>A traditional pizza with fresh mozzarella, basil, and tomato sauce.</p>
+            <p class="price">$18.99</p>
+        </div>
+        <div class="menu-item">
+            <h3>Seafood Paella</h3>
+            <p>A savory Spanish rice dish with shrimp, clams, mussels, and calamari.</p>
+            <p class="price">$34.99</p>
+        </div>
+        <div class="menu-item">
+            <h3>Vegetarian Burger</h3>
+            <p>A grilled veggie patty with lettuce, tomato, and avocado on a toasted bun.</p>
+            <p class="price">$15.99</p>
+        </div>
+        <div class="menu-item">
+            <h3>Chocolate Lava Cake</h3>
+            <p>A warm, decadent chocolate cake with a gooey molten center, served with vanilla ice cream.</p>
+            <p class="price">$8.99</p>
+        </div>
+        <div class="menu-item">
+            <h3>Tiramisu</h3>
+            <p>Classic Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cream.</p>
+            <p class="price">$7.99</p>
+        </div>
+        <div class="menu-item">
+            <h3>Fresh Lemonade</h3>
+            <p>A refreshing drink made with freshly squeezed lemons, water, and a hint of sweetness.</p>
+            <p class="price">$4.99</p>
+        </div>
+        <div class="menu-item">
+            <h3>Iced Tea</h3>
+            <p>Cold brewed tea served over ice, with your choice of sweetened or unsweetened.</p>
+            <p class="price">$3.99</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sapphire Terrace. All rights reserved.</p>
+		<a href="{{ url_for('login') }}" class="lock-icon" title="Admin Login"><img src="{{ url_for('static', filename='images/lock.jpg') }}" alt="Lock Icon"></a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!--about.html--!>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        /* Styles for the horizontal image scroller */
+        .image-scroller {
+            display: flex;
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+
+        .image-scroller img {
+            height: 300px;
+            margin-right: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-scroller img:last-child {
+            margin-right: 0;
+        }
+
+        /* Additional styling for text in the about-us section */
+        #about-us p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        #about-us h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+	 <div class="logo">
+            <h1>Sapphire Terrace</h1> <!-- Add your restaurant's name here -->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('menu') }}">Menu</a></li>
+                <li><a href="{{ url_for('reservation') }}">Reservation</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about-us">
+        <h2>About Us</h2>
+        <p>We are a family-owned restaurant offering the finest dining experience with a focus on quality ingredients and excellent service. Our passion for food and hospitality is reflected in every dish we serve. We pride ourselves on creating a warm and inviting atmosphere for all our guests, ensuring each visit is a memorable one.</p>
+        
+        <p>Whether you're enjoying a meal with friends, celebrating a special occasion, or simply looking for a cozy place to dine, we provide an experience that goes beyond just food. From the moment you walk through our doors, you’ll be greeted by our friendly and professional staff, who are dedicated to making your time with us as enjoyable as possible.</p>
+
+        <p>Our menu features a wide variety of dishes made from locally sourced ingredients, ensuring freshness and taste in every bite. We believe in offering something for everyone, whether you're a fan of classic comfort food or looking to try something new and exciting.</p>
+
+        
+
+        <!-- Horizontal image scroller for showcasing food, ambiance, and the team -->
+        <div class="image-scroller">
+            <img src="{{ url_for('static', filename='images/food1.jpg') }}" alt="Delicious Grilled Steak">
+            <img src="{{ url_for('static', filename='images/food2.jpg') }}" alt="Pasta Primavera">
+            <img src="{{ url_for('static', filename='images/team1.jpg') }}" alt="Friendly Team Members">
+            <img src="{{ url_for('static', filename='images/ambiance1.jpg') }}" alt="Restaurant Ambiance">
+            <img src="{{ url_for('static', filename='images/food3.jpg') }}" alt="Fresh Seafood Platter">
+            <img src="{{ url_for('static', filename='images/team2.jpg') }}" alt="Our Chef in Action">
+            <img src="{{ url_for('static', filename='images/food4.jpg') }}" alt="Tiramisu">
+		    <img src="{{ url_for('static', filename='images/ambiance2.jpg') }}" alt="More Ambiance">
+			<img src="{{ url_for('static', filename='images/drinks1.jpg') }}" alt="Lemonade">
+			<img src="{{ url_for('static', filename='images/dessert.jpg') }}" alt="Dessert">
+			<img src="{{ url_for('static', filename='images/food5.jpg') }}" alt="Lamb">
+
+			
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sapphire Terrace. All rights reserved.</p>
+		<a href="{{ url_for('login') }}" class="lock-icon" title="Admin Login"><img src="{{ url_for('static', filename='images/lock.jpg') }}" alt="Lock Icon"></a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,357 @@
+//styles.css
+/* General Styling */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Soft light gray */
+    color: #333; /* Dark text for contrast */
+}
+
+/* Make sure the footer stays at the bottom if content is short */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    flex: 1; /* This allows the slideshow content to grow and fill the available space */
+    height: 100vh; /* Make sure the slideshow takes full viewport height */
+    position: relative; /* To position slides absolutely */
+    overflow: hidden; /* Hide images that go out of the container */
+}
+
+/* Style for each image in the slideshow */
+.image-slide {
+    display: none; /* Initially hide all images */
+    position: absolute; /* Position each image inside the container */
+    width: 100%; /* Make the image take the full width */
+    height: 100%; /* Ensure images fill the container */
+    background-size: cover; /* Ensure the image covers the div */
+    background-position: center; /* Center the image */
+}
+
+/* Optional: Make sure the first image is visible initially */
+.image-slide:first-child {
+    display: block;
+}
+
+/* Header Styling */
+header {
+    background-color: #2f3061; /* Deep purple-blue */
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column; /* Allows the logo and nav to stack */
+    align-items: center; /* Center-align both logo and navbar */
+}
+
+/* Center the logo */
+header .logo h1 {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: bold;
+    display: inline-block;
+    color: #ffd275; /* Gold color */
+}
+
+/* Navbar Styles */
+header nav {
+    width: 100%; /* Make the nav take full width */
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+    align-items: center;
+    margin-top: 10px; /* Add some space between logo and nav */
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center items in navbar */
+    width: 100%;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffd275; /* Light gold on hover */
+    text-shadow: 0 0 5px rgba(255, 210, 117, 0.7);
+}
+
+/* Hero Section Styling */
+#hero {
+    background-color: #600020; /* Deep maroon */
+    color: #ffd275; /* Gold text for contrast */
+    padding: 100px 20px;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+#hero p {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+/* Menu Section Styling */
+#menu {
+    padding: 40px 20px;
+    background-color: #e9cd94; /* Soft beige */
+}
+
+#menu h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #2f3061;
+    margin-bottom: 40px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff8e7; /* Off-white for clarity */
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item h3 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #2f3061;
+}
+
+.menu-item p {
+    margin: 5px 0;
+}
+
+.menu-item .price {
+    font-size: 1.5em;
+    color: #600020;
+}
+
+.menu-item:hover {
+    background-color: #ffd275; /* Highlight gold on hover */
+    transform: translateY(-5px);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Reservation Section Styling */
+#reservation {
+    padding: 40px 20px;
+    background-color: #2f3061;
+}
+
+#reservation h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #2f3061;
+    margin-bottom: 40px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff8e7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+form input,
+form select,
+form button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+form button {
+    background-color: #2f3061;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #ffd275; /* Gold on hover */
+    color: #333;
+}
+
+/* About Us Section Styling */
+#about-us {
+    padding: 40px 20px;
+    background-color: #e9cd94; /* Beige */
+}
+
+#about-us h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #2f3061;
+    margin-bottom: 40px;
+}
+
+#about-us p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: center;
+	margin-top: 42px
+}
+
+/* Contact Section Styling */
+#contact {
+    padding: 40px 20px;
+    background-color: #ffffff;
+}
+
+#contact h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #2f3061;
+    margin-bottom: 40px;
+}
+
+#contact p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Footer Section Styling */
+footer {
+    background-color: #2f3061; /* Deep purple-blue */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .lock-icon {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+footer .lock-icon img {
+    width: 20px; /* Adjust to desired size */
+    height: 20px; /* Adjust to desired size */
+    opacity: 0.8; /* Slight transparency */
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+footer .lock-icon img:hover {
+    opacity: 1;
+    transform: scale(1.2); /* Subtle zoom on hover */
+}
+
+/* styles.css */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.no-reservations {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+}
+
+#admin-dashboard {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+#admin-dashboard .menu-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Style for the buttons */
+.btn {
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+}
+
+.btn-edit {
+    background-color: #4CAF50; /* Green for Edit */
+}
+
+.btn-edit:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.btn-delete {
+    background-color: #f44336; /* Red for Delete */
+}
+
+.btn-delete:hover {
+    background-color: #e53935; /* Darker red on hover */
+}
+
