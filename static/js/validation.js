@@ -1,9 +1,14 @@
+
 //validation.js
 
 document.addEventListener('DOMContentLoaded', function () {
     const reservationForm = document.getElementById('reservation-form');
 
+
     reservationForm.addEventListener('submit', function (event) {
+
+
+
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
         const date = document.getElementById('date').value;
@@ -64,10 +69,16 @@ document.addEventListener('DOMContentLoaded', function () {
             errors.push("guests");
         }
 
-        // If there are errors, prevent form submission and show them
+       // If there are errors, prevent form submission and show them
         if (errors.length > 0) {
             event.preventDefault();
-
+        } else {
+            // If no errors, show success message
+            showSuccessMessage();
         }
     });
 });
+
+function showSuccessMessage() {
+    alert("Your reservation has been successfully made! We look forward to seeing you at Sapphire Terrace.");
+}

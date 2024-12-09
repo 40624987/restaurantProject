@@ -105,7 +105,7 @@
 
 
 
-            <form id="reservation-form" method="post" onsubmit="return showSuccessMessage();">
+            <form id="reservation-form" method="post">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" placeholder="Your Full Name" required>
     <small class="error-message" id="name-error"></small>
@@ -136,13 +136,6 @@
 		<a href="{{ url_for('login') }}" class="lock-icon" title="Admin Login"><img src="{{ url_for('static', filename='images/lock.jpg') }}" alt="Lock Icon"></a>
     </footer>
     <script src="{{ url_for('static', filename='js/validation.js') }}"></script>
-
-    <script>
-        function showSuccessMessage() {
-            alert("Your reservation has been successfully made! We look forward to seeing you at Sapphire Terrace.");
-            return true; // Allow form submission
-        }
-    </script>
 
 </body>
 </html>
