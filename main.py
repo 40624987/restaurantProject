@@ -2,12 +2,13 @@
 # main.py
 import sqlite3
 import os
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 from sqlalchemy import func
 
 app = Flask(__name__)
+app.secret_key = 'your_secret_key'  # Required for session-based flash messages
 
 # Database setup
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///reservations.db'  # SQLite database
@@ -114,6 +115,9 @@ def reservation():
         # Add the reservation to the database
         db.session.add(new_reservation)
         db.session.commit()
+
+
+
 
         return redirect(url_for('home'))  # Redirect to home after submission
 
